@@ -1,0 +1,6 @@
+# TODO
+1. support logger
+2. test
+3. update README.rst
+4. write setup.py
+5. register to pypi
