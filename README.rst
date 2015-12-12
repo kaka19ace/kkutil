@@ -2,7 +2,7 @@
 kkutil: python utils lib
 ***********************
 
-**kkutil** is a util-tool library.
+**kkutil** is a util-tool library for python.
 
 Project Links
 =============
