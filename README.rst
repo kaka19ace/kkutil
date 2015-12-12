@@ -16,7 +16,7 @@ Get It Now
 
 ::
 
-    $ pip install kkconst
+    $ pip install kkutil
 
 
 License
