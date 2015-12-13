@@ -1,6 +1,5 @@
 # TODO
-1. support logger
-2. test
-3. update README.rst
-4. write setup.py
-5. register to pypi
+1. test
+2. update README.rst
+3. write setup.py
+4. register to pypi
