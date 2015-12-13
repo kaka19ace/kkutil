@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 #
 # @date     Dec 13 2015
-# @brief     
+# @brief
 #
 
 from .loader import Loader

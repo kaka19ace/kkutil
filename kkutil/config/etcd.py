@@ -3,7 +3,7 @@
 #
 # @file     etcd.py
 # @date     Dec 13 2015
-# @brief     
+# @brief
 #
 
 """

@@ -3,7 +3,7 @@
 #
 # @file     __init__.py
 # @date     Dec 13 2015
-# @brief     
+# @brief
 #
 
 from .common import *
