@@ -1,45 +1,20 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-# @date     Dec 13 2015
-# @brief
-#
 
 import sys
-import signal
 import ctypes
 import socket
 import struct
-
-import traceback
 
 import time
 import datetime
 from decimal import Decimal
 
-import json
 import hashlib
 import base64
 
 PY2 = (int(sys.version[0]) == 2)
-
-
-def get_exception_message():
-    return json.dumps(traceback.format_exception(*sys.exc_info()))
-
-
-def register_quit_handler(handler, signals=None):
-    """
-    :param handler: process your things after receive quit signal
-    :param signals:
-        if not signals: default signals are SIGQUIT SIGTERM SIGINT
-        else use the param signals as you want
-    :return:
-    """
-    if not signals:
-        signals = [signal.SIGQUIT, signal.SIGTERM, signal.SIGINT]
-    for s in signals:
-        signal.signal(s, handler)
 
 
 class TypeUtil(object):
@@ -169,12 +144,12 @@ class IPUtil(object):
             if not PY2:
                 exec("""
                 raise e.with_traceback(sys.exc_info()[2])
-""")
+                """)
             else:
                 exec("""
                 exc_info = sys.exc_info()
                 raise exc_info[0], exc_info[1], exc_info[2]
-""")
+                """)
 
         # In Python 3 is bytes/ In Python 2 is str
         return binary_ip.decode('utf-8') if isinstance(binary_ip[0], int) else binary_ip

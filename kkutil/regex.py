@@ -1,10 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-# @file     regex.py
-# @date     Aug 08 2015
-# @brief
-# 
 
 
 import re
