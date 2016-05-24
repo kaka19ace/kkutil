@@ -9,26 +9,25 @@ import logging
 class Loader(object):
     _config = NotImplemented
     _config_cache_map = {}
-    _threading_lock = threading.Lock()
+    _lock = threading.RLock()
 
     @classmethod
     def set_config(cls, config):
         """
         :param config: kkutils.config.Config instance
-        :return:
         """
-        with cls._threading_lock:
+        with cls._lock:
             cls._config = config
 
     @classmethod
     def set_logger(cls, logger):
-        with cls._threading_lock:
+        with cls._lock:
             cls.logger = logger
 
     @classmethod
     def _load_by_key(cls, key):
         if cls._config_cache_map.get(key, None) is None:
-            with cls._threading_lock:
+            with cls._lock:
                 if cls._config_cache_map.get(key, None) is None:
                     cls._config_cache_map[key] = cls._config.get_config_data(key)
         return cls._config_cache_map[key]

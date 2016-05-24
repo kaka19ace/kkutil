@@ -1,14 +1,14 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-# @file     system.py
-# @author   kaka_ace <xiang.ace@gmail.com>
-# @date     Jan 06 2016
-# @brief     
-#
 
+try:
+    import ujson as json
+except:
+    import json
+
+import os
 import sys
-import json
 import signal
 import traceback
 
@@ -32,3 +32,7 @@ def register_quit_handler(handler, signals=None):
         signals = [signal.SIGQUIT, signal.SIGTERM, signal.SIGINT]
     for s in signals:
         signal.signal(s, handler)
+
+
+def getpid():
+    return os.getpid()

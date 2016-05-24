@@ -1,10 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-# @file     yaml.py
-# @date     Dec 13 2015
-# @brief
-#
+
 
 import os
 import yaml

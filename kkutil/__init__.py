@@ -8,4 +8,5 @@ from .common import *
 from .sugar import *
 from .config import Config
 from .loader import Loader
-from .regex import RegexUtil
+from .regex import *
+
